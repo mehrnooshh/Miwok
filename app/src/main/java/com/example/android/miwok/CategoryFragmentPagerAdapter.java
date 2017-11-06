@@ -9,26 +9,26 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 public class CategoryFragmentPagerAdapter extends FragmentPagerAdapter {
 
+    private String[] tabTitles = new String[] { "Numbers", "Family", "Colors","Phrases" };
+
+    private Fragment[] fragments = new Fragment[] { new NumbersFragment(), new FamilyMembersFragment(),  new ColorsFragment(), new PhrasesFragment() };
+
     public CategoryFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new NumbersFragment();
-        } else if (position == 1){
-            return new FamilyMembersFragment();
-        } else if (position==2){
-            return new ColorsFragment();
-        }
-        else {
-            return new PhrasesFragment();
-        }
+       return fragments[position];
     }
 
     @Override
     public int getCount() {
-        return 4;
+        return fragments.length;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return tabTitles[position];
     }
 }

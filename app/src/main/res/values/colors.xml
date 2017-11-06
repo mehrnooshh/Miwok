@@ -34,4 +34,14 @@
 
     <!-- Background color for the phrases category -->
     <color name="category_phrases">#16AFCA</color>
+
+    <!-- Text color of the tabs -->
+    <color name="tab_text_color">#A8A19E</color>
+
+    <!-- Indicator line color for selected tab -->
+    <color name="tab_indicator_color">#FFFFFF</color>
+
+    <!-- Text color of selected tab -->
+    <color name="selected_tab_color">#FFFFFF</color>
+
 </resources>
